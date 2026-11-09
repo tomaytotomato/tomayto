@@ -2397,6 +2397,26 @@ html.dark-mode .gh-content table:not(.gist table) td {
     border: color-mod(var(--color-darkmode) lightness(17%)) 1px solid;
 }
 
+/* GitHub's gist stylesheet always draws a white card, so keep gist text dark
+   rather than inheriting the light dark-mode body colour */
+html.dark-mode .gh-content .gist {
+    color: #1f2328;
+}
+
+html.dark-mode .gh-content .gist a {
+    color: #0969da;
+}
+
+html.dark-mode .gh-content .gist code {
+    color: inherit;
+    background: rgba(175, 184, 193, 0.2);
+}
+
+html.dark-mode .gh-content .gist pre {
+    color: #1f2328;
+    background: #f6f8fa;
+}
+
 html.dark-mode .gh-content :is(input, textarea) {
     color: color-mod(var(--color-midgrey) l(-30%));
 }
@@ -2598,6 +2618,24 @@ html.dark-mode .footer-cta-title {
     html.auto-color .gh-content table:not(.gist table) th,
     html.auto-color .gh-content table:not(.gist table) td {
         border: color-mod(var(--color-darkmode) lightness(17%)) 1px solid;
+    }
+
+    html.auto-color .gh-content .gist {
+        color: #1f2328;
+    }
+
+    html.auto-color .gh-content .gist a {
+        color: #0969da;
+    }
+
+    html.auto-color .gh-content .gist code {
+        color: inherit;
+        background: rgba(175, 184, 193, 0.2);
+    }
+
+    html.auto-color .gh-content .gist pre {
+        color: #1f2328;
+        background: #f6f8fa;
     }
 
     html.auto-color .gh-content :is(input, textarea) {
