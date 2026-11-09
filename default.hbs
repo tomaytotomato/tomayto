@@ -11,7 +11,7 @@
 
     {{!-- Preload critical resources to reduce render-blocking --}}
     <link rel="preload" as="style" href="{{asset "built/screen.css"}}" />
-    <link rel="preload" as="script" href="{{asset "built/casper.js"}}" />
+    <link rel="preload" as="script" href="{{asset "built/tomayto.js"}}" />
 
     {{!-- Theme assets - use the {asset} helper to reference styles & scripts,
     this will take care of caching and cache-busting automatically --}}
@@ -108,7 +108,7 @@
 {{/is}}
 
 {{!-- Scripts - handle responsive videos, infinite scroll, floating headers, and galleries --}}
-<script src="{{asset "built/casper.js"}}" defer></script>
+<script src="{{asset "built/tomayto.js"}}" defer></script>
 
 {{!-- Ghost outputs required functional scripts with this tag - it should always be the last thing before the closing body tag --}}
 {{ghost_foot}}

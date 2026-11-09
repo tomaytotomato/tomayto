@@ -22,8 +22,8 @@ const easyimport = require('postcss-easy-import');
 // translations support
 const { mergeLocales } = require('@tryghost/theme-translations/build');
 
-const REPO = 'TryGhost/Casper';
-const REPO_READONLY = 'TryGhost/Casper';
+const REPO = 'tomaytotomato/tomayto';
+const REPO_READONLY = 'tomaytotomato/tomayto';
 const CHANGELOG_PATH = path.join(process.cwd(), '.', 'changelog.md');
 
 function serve(done) {
@@ -68,7 +68,7 @@ function js(done) {
             'assets/js/lib/*.js',
             'assets/js/*.js'
         ], {sourcemaps: true}),
-        concat('casper.js'),
+        concat('tomayto.js'),
         uglify(),
         dest('assets/built/', {sourcemaps: '.'}),
         livereload()
@@ -142,7 +142,7 @@ exports.release = async () => {
         const compatibleWithGhost = result.compatibleWithGhost;
 
         const releasesResponse = await releaseUtils.releases.get({
-            userAgent: 'Casper',
+            userAgent: 'Tomayto',
             uri: `https://api.github.com/repos/${REPO_READONLY}/releases`
         });
 
@@ -172,7 +172,7 @@ exports.release = async () => {
             preRelease: false,
             tagName: 'v' + newVersion,
             releaseName: newVersion,
-            userAgent: 'Casper',
+            userAgent: 'Tomayto',
             uri: `https://api.github.com/repos/${REPO}/releases`,
             github: {
                 token: githubToken
